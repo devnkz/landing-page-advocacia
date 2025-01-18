@@ -18,4 +18,120 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(9 9 11);
+}
+
+#home{
+  background-image: url('/Fundo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Estilos das animações para o itens aparecerem conforme o scroll */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Casos :nth-child(2) {
+  transition-delay: 400ms
+}
+
+.Casos :nth-child(3) {
+  transition-delay: 700ms
+}
+
+.Itemhidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(15px);
+  transform: translateX(-100%);
+}
+
+.Itemshow {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* Estilos dos input do form de contatos */
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border: gray 2px solid;
+  border-radius: 12px;
+  outline: none;
+}
+
+.input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.option {
+  background-color: black;
+  padding: 4px;
+  border: none;
+}
+
+/* classes do botão voltar ao topo */
+
+.Sumir {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1s;
+}
+
+.Aparecer {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+}
+
+/* Animação de linha vai e volta */
+
+@keyframes expandir {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+.div-animada {
+  animation: expandir 3s ease-out infinite;
+}
+
+
+/* Estilos da scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Estilo para a área de fundo do scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Estilo para o polegar (thumb) do scrollbar */
+::-webkit-scrollbar-thumb {
+  background: yellow;
+  border-radius: 6px;
+}
+
+/* Estilo para o polegar do scrollbar quando em hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
